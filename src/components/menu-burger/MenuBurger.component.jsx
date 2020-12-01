@@ -1,5 +1,3 @@
-import "./_menu-burger.styles.scss";
-
 const MenuBurger = () => {
     return (
         <button

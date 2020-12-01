@@ -1,9 +1,8 @@
-import "./_header-menu.styles.scss";
 import MenuItem from "../menu-item/MenuItem.component";
 
 const HeaderMenu = () => {
     return (
-        <ul className="navbar-nav ml-auto">
+        <ul className="header-menu navbar-nav">
             <MenuItem name="ABOUT" link="/about" />
             <MenuItem name="PRODUCTS" link="/products" />
             <MenuItem.MenuItemImage name="Cart" link="/cart" image="/img/shopping-bag.svg">

@@ -1,20 +1,28 @@
 .header {
     background-color: $brown-light;
     position: relative;
-}
-.header-content {
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 0 15px;
-    @media (max-width: 1350px) {
-        max-width: 1220px;
-    }
 
-    .top-header {
-        padding: 9px 0;
+    &-content {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
 
-        img {
-            margin-left: 12px;
+        @include media(1350) {
+            max-width: 1220px;
+        }
+
+        .top-header {
+            padding: 9px 0;
+            display: grid;
+            grid-template-columns: repeat(3, min-content);
+            gap: 10px;
+            justify-content: end;
+
+            img {
+                margin-left: 12px;
+            }
         }
     }
 }

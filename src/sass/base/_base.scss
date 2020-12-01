@@ -9,20 +9,6 @@
     }
 }
 
-html {
-    font-size: 62.5%;
-
-    @include media(1200) {
-        font-size: 52%;
-    }
-    @include media(900) {
-        font-size: 45%;
-    }
-    @include media(600) {
-        font-size: 38%;
-    }
-}
-
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
         "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;

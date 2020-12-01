@@ -19,6 +19,7 @@
         "sass/*": "./sass/*",
         "layout/*": "./layout/*",
         "utilities/*": "./utilities/*",
-        "views/*": "./views/*"
+        "views/*": "./views/*",
+        "pages/*": "./pages/*"
     }
 }
