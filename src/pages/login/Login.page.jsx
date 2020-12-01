@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { login } from "api/auth";
-import "./index.scss";
+import "./products.styles.scss";
 import Button from "../../components/Button/button";
 import FormInput from "../../components/FormInput/FormInput";
 
@@ -28,7 +28,7 @@ const Login = () => {
 
     return (
         <section className="position-relative register-page">
-            <img src="/img/thank-you.png" alt="" className="w-100 h-100 bg-img" />
+            <img src="/images/login-register-bg.png" alt="" className="w-100 h-100 bg-img" />
             <div className="register-page-content">
                 <form className="input-form">
                     <h1 className="text-center">Login</h1>

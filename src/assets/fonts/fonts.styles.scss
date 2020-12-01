@@ -1,1 +1,20 @@
-@import "./roboto/roboto.font";
+@font-face {
+  font-family: "Helvetica Neue Regular";
+  src: url("../fonts/Helvetica Neue/Helvetica Neue Regular.eot");
+  src: url("../fonts/Helvetica Neue/Helvetica Neue Regular.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/Helvetica Neue/Helvetica Neue Regular.woff2") format("woff2"),
+  url("../fonts/Helvetica Neue/Helvetica Neue Regular.woff") format("woff"),
+  url("../fonts/Helvetica Neue/Helvetica Neue Regular.ttf") format("truetype"),
+  url("../fonts/Helvetica Neue/Helvetica Neue Regular.svg") format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "EngraversGothic BT";
+  src: url("../fonts/EngraversGothic BT/EngraversGothic BT.eot");
+  src: url("../fonts/EngraversGothic BT/EngraversGothic BT.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/EngraversGothic BT/EngraversGothic BT.woff2") format("woff2"),
+  url("../fonts/EngraversGothic BT/EngraversGothic BT.woff") format("woff"),
+  url("../fonts/EngraversGothic BT/EngraversGothic BT.ttf") format("truetype"),
+  url("../fonts/EngraversGothic BT/EngraversGothic BT.svg") format("svg");
+  font-display: swap;
+}
