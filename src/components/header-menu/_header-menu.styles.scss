@@ -1,0 +1,26 @@
+.navbar.my-navbar {
+  position: initial;
+  margin-top: -43px;
+  padding: 0;
+  @media (max-width: 575px) {
+    margin-top: -19px;
+  }
+  .navbar-brand {
+    @media (max-width: 991px) {
+      order: -1;
+    }
+
+    img {
+      @media (max-width: 575px) {
+        width: 100px;
+      }
+    }
+  }
+  .navbar-collapse {
+    margin-top: 47px;
+    @media (max-width: 991px) {
+      padding: 50px 15px;
+      margin-top: 0;
+    }
+  }
+}
