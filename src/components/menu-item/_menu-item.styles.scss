@@ -1,123 +1,120 @@
 .nav-item {
-  margin-left: 32px;
-  @media (max-width: 1120px) {
-    margin-left: 10px;
-  }
-  @media (max-width: 991px) {
-    margin-left: 0;
-  }
-
-  &.menu-search {
-    margin: 0 75px 0 25px;
-    position: relative;
+    margin-left: 32px;
     @media (max-width: 1120px) {
-      margin: 0 21px 0 25px;
+        margin-left: 10px;
     }
     @media (max-width: 991px) {
-      margin: 0;
+        margin-left: 0;
     }
 
-    .open-search {
-      cursor: pointer;
-      @media (max-width: 991px) {
-        display: none;
-      }
-    }
-
-    .search-form {
-      position: absolute;
-      right: 0;
-      top: -14px;
-      background: white;
-      padding: 0 50px 0 15px;
-      width: 0;
-      -webkit-transition: .3s all;
-      transition: .3s all;
-      opacity: 0;
-      z-index: -1;
-      @media (max-width: 991px) {
-        position: initial;
-        background: transparent;
-        width: 100%;
-        opacity: 1;
-        z-index: 1;
-        padding: 15px;
-        max-width: 400px;
-        margin: 0 auto;
-
-      }
-
-      &.opened-search {
-        width: 566px;
-        transition: .3s all;
-        opacity: 1;
-        z-index: 1;
-        @media (max-width: 1024px) {
-          width: 520px;
+    &.menu-search {
+        margin: 0 75px 0 25px;
+        position: relative;
+        @media (max-width: 1120px) {
+            margin: 0 21px 0 25px;
         }
-
-      }
-
-      input {
-        border: 0;
-        width: 100%;
-        padding: 12px 20px;
-        color: $brown-light;
-        font: 16px/17px $font-regular;
-        background: transparent;
         @media (max-width: 991px) {
-          color: $gold;
+            margin: 0;
         }
 
-        &::placeholder {
-          color: $brown-light;
-          @media (max-width: 991px) {
-            color: white;
-          }
+        .open-search {
+            cursor: pointer;
+            @media (max-width: 991px) {
+                display: none;
+            }
         }
-      }
 
+        .search-form {
+            position: absolute;
+            right: 0;
+            top: -14px;
+            background: white;
+            padding: 0 50px 0 15px;
+            width: 0;
+            -webkit-transition: 0.3s all;
+            transition: 0.3s all;
+            opacity: 0;
+            z-index: -1;
+            @media (max-width: 991px) {
+                position: initial;
+                background: transparent;
+                width: 100%;
+                opacity: 1;
+                z-index: 1;
+                padding: 15px;
+                max-width: 400px;
+                margin: 0 auto;
+            }
 
-      .close-search {
-        position: absolute;
-        right: 14px;
-        top: 13px;
-        width: 14px;
-        cursor: pointer;
+            &.opened-search {
+                width: 566px;
+                transition: 0.3s all;
+                opacity: 1;
+                z-index: 1;
+                @media (max-width: 1024px) {
+                    width: 520px;
+                }
+            }
+
+            input {
+                border: 0;
+                width: 100%;
+                padding: 12px 20px;
+                color: $brown-light;
+                font: 16px/17px $font-regular;
+                background: transparent;
+                @media (max-width: 991px) {
+                    color: $gold;
+                }
+
+                &::placeholder {
+                    color: $brown-light;
+                    @media (max-width: 991px) {
+                        color: white;
+                    }
+                }
+            }
+
+            .close-search {
+                position: absolute;
+                right: 14px;
+                top: 13px;
+                width: 14px;
+                cursor: pointer;
+                @media (max-width: 991px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &.item-icon {
+        margin-left: 4px;
         @media (max-width: 991px) {
-          display: none;
+            margin-left: 0;
         }
-      }
-    }
-  }
 
-  &.item-icon {
-    margin-left: 4px;
-    @media (max-width: 991px) {
-      margin-left: 0;
-    }
+        .nav-link {
+            font: 16px/18px $font-regular;
+            letter-spacing: 0;
+            @media (max-width: 991px) {
+                justify-content: center;
+            }
 
-    .nav-link {
-      font: 16px/18px $font-regular;
-      letter-spacing: 0;
-      @media (max-width: 991px) {
-        justify-content: center;
-      }
-
-      img {
-        margin-right: 12px;
-        margin-top: -4px;
-      }
+            img {
+                margin-right: 12px;
+                margin-top: -4px;
+            }
+        }
     }
-  }
 }
 
 .nav-link {
-  color: white;
-  font: 14px/16px $font-regular;
-  cursor: pointer;
-  letter-spacing: 1.1px;
-  @media (max-width: 991px) {
-    text-align: center;
-  }
+    color: white;
+    font: 14px/16px $font-regular;
+    cursor: pointer;
+    letter-spacing: 1.1px;
+    @media (max-width: 991px) {
+        text-align: center;
+    }
 }

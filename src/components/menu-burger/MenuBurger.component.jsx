@@ -1,4 +1,4 @@
-import './_menu-burger.styles.scss'
+import "./_menu-burger.styles.scss";
 
 const MenuBurger = () => {
     return (
@@ -16,7 +16,7 @@ const MenuBurger = () => {
             <span> </span>
             <span> </span>
         </button>
-    )
-}
+    );
+};
 
-export default MenuBurger
+export default MenuBurger;

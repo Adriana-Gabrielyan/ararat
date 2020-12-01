@@ -10,13 +10,10 @@ const MenuItem = (props) => {
     );
 };
 
-const MenuItemImage = ({children, ...props}) => {
+const MenuItemImage = ({ children, ...props }) => {
     return (
         <li className="nav-item item-icon position-relative">
-            <a
-                className="nav-link d-flex align-items-center"
-                href={props.link}
-                onClick={props.onClick}>
+            <a className="nav-link d-flex align-items-center" href={props.link} onClick={props.onClick}>
                 <img src={props.image} alt="" />
                 <span> {props.name}</span>
                 {children}
@@ -25,4 +22,4 @@ const MenuItemImage = ({children, ...props}) => {
     );
 };
 
-export default Object.assign(MenuItem, {MenuItemImage});
+export default Object.assign(MenuItem, { MenuItemImage });
