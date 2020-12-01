@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
 const About = () => {
-  return (
-    <>
-      <section>
-        <h1>About Page</h1>
-      </section>
-    </>
-  );
+    return (
+        <>
+            <section>
+                <h1>About Page</h1>
+            </section>
+        </>
+    );
 };
 
 export default About;

@@ -1,37 +1,35 @@
 .register-page {
-  background-image: radial-gradient(#371C0D, #0D0703);
-  min-height: calc(100vh - 560px);
+    background-image: radial-gradient(#371c0d, #0d0703);
+    min-height: calc(100vh - 560px);
 
-  h1 {
-    font: 20px/24px $font-regular;
-    color: white;
-    margin-bottom: 13px;
-  }
+    h1 {
+        font: 20px/24px $font-regular;
+        color: white;
+        margin-bottom: 13px;
+    }
 
-  .bg-img {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    object-fit: cover;
-    opacity: .24;
-  }
+    .bg-img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        object-fit: cover;
+        opacity: 0.24;
+    }
 
-  .register-page-content {
-    max-width: 411px;
-    margin: 0 auto;
-    padding: 45px 15px 38px;
-    position: relative;
-    z-index: 1;
-  }
+    .register-page-content {
+        max-width: 411px;
+        margin: 0 auto;
+        padding: 45px 15px 38px;
+        position: relative;
+        z-index: 1;
+    }
 }
 
 .input-form {
-  width: 100%;
+    width: 100%;
 
-
-
-  button {
-    margin-top: 46px;
-  }
+    button {
+        margin-top: 46px;
+    }
 }
