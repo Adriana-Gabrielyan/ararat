@@ -5,6 +5,6 @@
     "jsxBracketSameLine": true,
     "tabWidth": 4,
     "bracketSpacing": true,
-    "endOfLine": "auto",
+    "endOfLine": "lf",
     "proseWrap": "always"
 }
