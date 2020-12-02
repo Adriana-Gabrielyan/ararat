@@ -89,10 +89,6 @@
     }
 
     &.item-icon {
-        margin-left: 4px;
-        @media (max-width: 991px) {
-            margin-left: 0;
-        }
 
         .nav-link {
             font: 16px/18px $font-regular;
@@ -117,4 +113,22 @@
     @media (max-width: 991px) {
         text-align: center;
     }
+    &:hover{
+        color: white;
+    }
+}
+.basket-product-count {
+    position: absolute;
+    top: -1px;
+    right: -8px;
+    display: flex;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #af8d54;
+    font-size: 10px;
+    padding: 1px;
+    align-items: center;
+    justify-content: center;
+    line-height: 5px;
 }

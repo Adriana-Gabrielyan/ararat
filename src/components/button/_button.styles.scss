@@ -1,40 +1,27 @@
-.ns-btn {
-    @include flexCenter;
-    cursor: pointer;
+.btn-outline-gold {
+  background-image: url("button.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  color: $brown-light;
+  text-align: center;
+  border: 0;
+  padding: 12px 27px;
+  font: 16px/22px $font-regular-2;
+  background-size: 100% 100%;
+  transition: .3s all;
+  display: inline-block;
+  text-transform: uppercase;
 
-    &,
-    &:visited,
-    &:active,
-    &:focus {
-        position: relative;
-        border-radius: 0.42rem;
-        font-size: 1.5rem;
-        padding: 1.1rem 2.5rem;
-        outline: none;
-        display: flex;
-        border: none;
-    }
+  &:hover {
+    background-image: url("button_hover.png");
+    transition: .3s all;
+    color: $brown-light;
+    text-decoration: none;
+  }
 
-    .spinner {
-        margin-left: 1rem;
-    }
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
 
-    &:focus {
-        box-shadow: none;
-    }
-
-    &--primary {
-        color: #fff;
-        background-color: #007bff;
-        border-color: #007bff;
-
-        &:not(:disabled):hover {
-            color: #fff;
-            background-color: #0065ca;
-        }
-        &:disabled {
-            background-color: #5fa5eb;
-            cursor: default;
-        }
-    }
 }

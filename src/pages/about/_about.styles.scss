@@ -1,0 +1,63 @@
+.standart-page {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 30px auto 70px;
+
+  .standart-page-content {
+    padding: 50px 45px;
+    background: #fbfafa;
+    border-radius: 10px;
+    @media (max-width: 575px) {
+      padding: 50px 15px;
+    }
+  }
+
+  .title-h1, h1 {
+    margin-bottom: 20px;
+    font: 31px/47px $font-regular-2;
+    @media (max-width: 575px) {
+      font: 28px/37px $font-regular-2;
+    }
+  }
+
+  h2 {
+    font-size: 30px;
+    @media (max-width: 575px) {
+      font-size: 25px;
+    }
+  }
+
+  h3 {
+    font-size: 24px;
+    @media (max-width: 575px) {
+      font-size: 22px;
+    }
+  }
+
+  h4 {
+    font-size: 21px;
+    @media (max-width: 575px) {
+      font-size: 18px;
+    }
+  }
+
+  h5 {
+    font-size: 18px;
+    @media (max-width: 575px) {
+      font-size: 16px;
+    }
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 20px;
+  }
+
+  a {
+    color: $gold;
+  }
+}
