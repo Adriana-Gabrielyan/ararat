@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import classNames from "classnames";
 
 const MenuItem = (props) => {
-    const { link, name } = props;
+    const { link, name, ...otherProps } = props;
     return (
-        <li className="nav-item">
+        <li className="nav-item" {...otherProps}>
             <Link className="nav-link" to={link}>
                 {name}
             </Link>

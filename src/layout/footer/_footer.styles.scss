@@ -35,7 +35,7 @@
         display: inline-block;
 
         &:lang(hy),
-        &:lang(ru){
+        &:lang(ru) {
             font: 14px/16px $font-regular-2;
         }
         &:hover {
@@ -63,7 +63,6 @@
                     width: 96px;
                 }
             }
-
         }
 
         .footer-block {
@@ -95,7 +94,6 @@
                         font-size: 14px;
                         margin-bottom: 10px;
                     }
-
                 }
             }
         }
@@ -125,7 +123,7 @@
                 white-space: nowrap;
                 @media (min-width: 992px) {
                     &:lang(hy),
-                    &:lang(ru){
+                    &:lang(ru) {
                         font-size: 18px;
                     }
                 }

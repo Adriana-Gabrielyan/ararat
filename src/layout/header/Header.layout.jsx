@@ -8,7 +8,7 @@ import HeaderMenu from "components/header-menu/HeaderMenu.component";
 
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header className="header">
             <div className="header-content">
@@ -32,7 +32,7 @@ const Header = () => {
                         <MenuBurger />
 
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                            <HeaderMenu />
+                            <HeaderMenu setDefaultPageState={props.setDefaultPageState} />
                         </div>
                     </nav>
                 </div>
