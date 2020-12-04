@@ -10,8 +10,8 @@ const DefaultPage = (props) => {
 
         setTimeout(() => {
             setIsLoading(false);
-            setState({ title: "Narek", text: "Sargsyan" });
-        }, 5000);
+            setState({ title: "Title", text: "Text" });
+        }, 500);
         // axios.get(`default/${props.params}`).then((response) => {
         //     const data = response.data;
         //     setState(data);

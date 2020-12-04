@@ -2,7 +2,7 @@ const PRODUCTS_DATA = [
     {
         id: 1,
         image: "https://shop.araratbrandy.com/storage/products/6919/5fa910307fbe2_ararat_akhtamar_packshot_arm_50cl-copy.png",
-        logo: "/images/logo-1.png",
+        logo: "https://shop.araratbrandy.com/storage/logos/16056880945174063.svg",
         price: 2500,
         category_id: 1,
         name: "Ararat 1",
@@ -13,7 +13,7 @@ const PRODUCTS_DATA = [
     {
         id: 2,
         image: "https://shop.araratbrandy.com/storage/products/6799/5f5f86e6d3007_ARARAT_SC2_AIO-1.png",
-        logo: "/images/logo-1.png",
+        logo: "https://shop.araratbrandy.com/storage/logos/16056880477173997.svg",
         price: 11250,
         category_id: 2,
         name: "Ararat 2",
@@ -24,7 +24,7 @@ const PRODUCTS_DATA = [
     {
         id: 3,
         image: "https://shop.araratbrandy.com/storage/products/6775/5f58a050d960d_Erebuni-30-1.png",
-        logo: "/images/logo-1.png",
+        logo: "https://shop.araratbrandy.com/storage/logos/16056891508864010.png",
         price: 6530,
         category_id: 3,
         name: "Ararat 3",
@@ -35,7 +35,7 @@ const PRODUCTS_DATA = [
     {
         id: 4,
         image: "https://shop.araratbrandy.com/storage/products/6803/5f607627262e7_01_packshot_75cl-copy.png",
-        logo: "/images/logo-1.png",
+        logo: "https://shop.araratbrandy.com/storage/logos/16057046987206513.svg",
         price: 7800,
         category_id: 4,
         name: "Ararat 4",
@@ -46,7 +46,7 @@ const PRODUCTS_DATA = [
     {
         id: 5,
         image: "https://shop.araratbrandy.com/storage/products/6777/5f58a0f6860df_EREBUNI-50-copy.png",
-        logo: "/images/logo-1.png",
+        logo: "https://shop.araratbrandy.com/storage/logos/16056882619784104.svg",
         price: 35600,
         category_id: 5,
         name: "Ararat 5",
@@ -57,7 +57,7 @@ const PRODUCTS_DATA = [
     {
         id: 6,
         image: "https://shop.araratbrandy.com/storage/products/6808/5f60aa551a5c2_Mini_3-in-1_Pack_3-4_ENG-2.png",
-        logo: "/images/logo-1.png",
+        logo: "https://shop.araratbrandy.com/storage/logos/16056881304307993.svg",
         price: 1500,
         category_id: 3,
         name: "Ararat 6",
