@@ -1,7 +1,8 @@
 const PRODUCTS_DATA = [
     {
         id: 1,
-        image: "https://shop.araratbrandy.com/storage/products/6919/5fa910307fbe2_ararat_akhtamar_packshot_arm_50cl-copy.png",
+        image:
+            "https://shop.araratbrandy.com/storage/products/6919/5fa910307fbe2_ararat_akhtamar_packshot_arm_50cl-copy.png",
         logo: "https://shop.araratbrandy.com/storage/logos/16056880945174063.svg",
         price: 2500,
         category_id: 1,
@@ -56,7 +57,8 @@ const PRODUCTS_DATA = [
     },
     {
         id: 6,
-        image: "https://shop.araratbrandy.com/storage/products/6808/5f60aa551a5c2_Mini_3-in-1_Pack_3-4_ENG-2.png",
+        image:
+            "https://shop.araratbrandy.com/storage/products/6808/5f60aa551a5c2_Mini_3-in-1_Pack_3-4_ENG-2.png",
         logo: "https://shop.araratbrandy.com/storage/logos/16056881304307993.svg",
         price: 1500,
         category_id: 3,

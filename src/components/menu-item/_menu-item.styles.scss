@@ -89,7 +89,6 @@
     }
 
     &.item-icon {
-
         .nav-link {
             font: 16px/18px $font-regular;
             letter-spacing: 0;
@@ -113,7 +112,7 @@
     @media (max-width: 991px) {
         text-align: center;
     }
-    &:hover{
+    &:hover {
         color: white;
     }
 }

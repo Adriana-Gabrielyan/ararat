@@ -11,11 +11,14 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
-input[type=number] {
+input[type="number"] {
     -moz-appearance: textfield;
 }
 
-input:focus, select:focus, textarea:focus, button:focus {
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
     box-shadow: none;
     outline: none;
 }

@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-const FormInput= ({ ...props}) => {
-  return <input {...props} />;
+const FormInput = ({ ...props }) => {
+    return <input {...props} />;
 };
 
 export default FormInput;
