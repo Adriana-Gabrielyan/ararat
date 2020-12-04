@@ -1,4 +1,4 @@
-import ProductBox from "../product-box/ProductBox.component";
+import ProductBox from "components/product-box/ProductBox.component";
 
 const ProductsList = (props) => {
     return (

@@ -1,6 +1,6 @@
-import BackgroundImage from "../../assets/images/thank-you.png";
-import FormInput from "../../components/form-input/FormInput.component";
-import Button from "../../components/button/Button.component";
+import BackgroundImage from "assets/images/thank-you.png";
+import FormInput from "components/form-input/FormInput.component";
+import Button from "components/button/Button.component";
 import { Link } from "react-router-dom";
 
 const Register = () => {
@@ -29,7 +29,6 @@ const Register = () => {
                 <div className="text-white mt-3 mb-2 text-center">
                     Already have an account?
                     <Link to="/login" className="text-gold">
-                        {" "}
                         Login
                     </Link>
                 </div>
