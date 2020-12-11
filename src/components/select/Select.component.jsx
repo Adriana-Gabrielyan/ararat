@@ -1,6 +1,6 @@
 const Select = (props) => {
     return (
-        <select id={props.id} onChange={props.onChange}>
+        <select id={props.id} onChange={props.onChange} className={props.className}>
             {props.options.map((option) => (
                 <option key={option.value} value={option.value}>
                     {option.label}

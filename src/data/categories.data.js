@@ -1,23 +1,23 @@
 const CATEGORIES = [
     {
         id: 1,
-        name: "Collection",
+        name: "The Legendary Brandies",
     },
     {
         id: 2,
-        name: "Vintage Range",
-    },
-    {
-        id: 3,
         name: "Limited Editions",
     },
     {
+        id: 3,
+        name: "Corporate offers",
+    },
+    {
         id: 4,
-        name: "Corporate Offers",
+        name: "Ararat Museum Exclusive Offers",
     },
     {
         id: 5,
-        name: "Cocktail Lounge",
+        name: "Gifts",
     },
 ];
 

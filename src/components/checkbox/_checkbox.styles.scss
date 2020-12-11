@@ -1,38 +1,86 @@
-label {
-    font: 14px/17px $font-regular;
-    color: $brown-light;
-    cursor: pointer;
+.filter-checkbox {
+  font: 14px/17px $font-regular;
+  color: $brown-light;
+  cursor: pointer;
+  position: relative;
+  padding: 9px 36px 5px 22px;
+
+  span {
     position: relative;
-    padding: 9px 36px 5px 22px;
+    z-index: -1;
+  }
 
-    span {
-        position: relative;
-        z-index: -1;
-    }
-
-    &.checked {
-        color: $gold;
-
-        &:before {
-            border-left: 1px solid $gold;
-            border-bottom: 1px solid $gold;
-        }
-    }
+  &.checked {
+    color: $gold;
 
     &:before {
-        content: "";
-        width: 5px;
-        height: 5px;
-        border-left: 1px solid $brown-light;
-        border-bottom: 1px solid $brown-light;
-        display: inline-block;
-        transform: rotate(224deg);
-        position: absolute;
-        top: 15px;
-        left: 0;
+      border-left: 1px solid $gold;
+      border-bottom: 1px solid $gold;
     }
+  }
 
-    input {
-        display: none;
+  &:before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-left: 1px solid $brown-light;
+    border-bottom: 1px solid $brown-light;
+    display: inline-block;
+    transform: rotate(224deg);
+    position: absolute;
+    top: 15px;
+    left: 0;
+  }
+
+  input {
+    display: none;
+  }
+}
+
+.styled-checkbox {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+
+  input {
+    position: absolute; // take it out of document flow
+    opacity: 0; // hide it
+    &:checked {
+      content: '';
+      position: absolute;
+      left: 3px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background: $gold;
+      width: 2px;
+      height: 2px;
+      transform: rotate(45deg);
+      box-shadow: 2px 0 0 $gold,
+      4px 0 0 $gold,
+      4px -2px 0 $gold,
+      4px -4px 0 $gold,
+      4px -6px 0 $gold,
+      4px -8px 0 $gold;
     }
+  }
+
+  &:before {
+    content: '';
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 16px;
+    flex: 0 0 16px;
+    height: 16px;
+    background: transparent;
+    border: 1px solid $gold;
+
+  }
+
+
+
+
 }

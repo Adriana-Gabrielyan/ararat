@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import PRODUCTS_DATA from "data/products.data";
 
-const ProductSlider = () => {
+const ProductSlider = (props) => {
     const settings = {
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -36,10 +36,12 @@ const ProductSlider = () => {
     const Products = PRODUCTS_DATA;
     return (
         <section className="brandy-section">
-            <h1 className="title-h1 text-center">The legendary Brandies</h1>
+            <h1 className="title-h1 text-center">{props.title}</h1>
             <Slider {...settings} className="hovered-slider default-slider brandy-slider">
                 {Products.map((product) => (
+
                     <ProductSliderItem key={product.id} {...product} />
+
                 ))}
             </Slider>
 

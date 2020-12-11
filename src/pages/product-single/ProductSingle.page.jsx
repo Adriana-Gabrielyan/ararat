@@ -1,7 +1,7 @@
 import PRODUCTS_DATA from "data/products.data";
 import Select from "components/select/Select.component";
 import Price from "components/price/Price.component";
-import Count from "components/cout/Count.component";
+import Count from "components/count/Count.component";
 import Button from "components/button/Button.component";
 import { Link } from "react-router-dom";
 

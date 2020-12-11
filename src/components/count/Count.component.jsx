@@ -3,7 +3,7 @@ const Count = (props) => {
         <div className="count d-flex justify-content-end align-items-center position-relative">
             <span>Quantity</span>
             <span className="sub"> </span>
-            <input type="number" value={props.count} readOnly />
+            <input type="number" value="1" readOnly />
             <span className="add"> </span>
         </div>
     );

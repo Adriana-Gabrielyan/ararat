@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { addItemToCart } from "redux/cart/cart.actions";
 
+
 const ProductBox = ({ item, addItemToCart }) => {
     const { id, image, logo, price } = item;
 

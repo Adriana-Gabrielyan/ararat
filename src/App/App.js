@@ -12,6 +12,7 @@ import Login from "pages/login/Login.page";
 import Register from "pages/register/Register.page";
 import Cart from "pages/cart/Cart.page";
 import ProductSingle from "pages/product-single/ProductSingle.page";
+import Payment from "pages/payment/Payment.component";
 import WithTopScroll from "../hocs/WithTopScroll.hoc";
 
 const RouteWithTopScroll = WithTopScroll(Route);
@@ -33,6 +34,7 @@ const App = () => {
                     <RouteWithTopScroll exact component={Login} path="/login" />
                     <RouteWithTopScroll exact component={Register} path="/register" />
                     <RouteWithTopScroll exact component={Cart} path="/cart" />
+                    <RouteWithTopScroll exact component={Payment} path="/payment" />
                     <RouteWithTopScroll
                         render={() => (
                             <DefaultPage title={defaultPageState.title} text={defaultPageState.text} />
