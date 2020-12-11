@@ -5,6 +5,8 @@ const CheckBox = ({children, variant, ...props}) => {
         "styled-checkbox": variant !== 'filter',
         "filter-checkbox": variant === 'filter'
     })
+
+
     return (
         <label htmlFor={props.id} onClick={props.onClick} className={props.className + " " + inputClasses}>
             {(variant === 'filter') ?

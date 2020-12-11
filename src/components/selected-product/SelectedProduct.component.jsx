@@ -14,7 +14,7 @@ const SelectedProduct = (props) => {
                 <div className="text">
                     <img src={product.logo} alt="" className="img-fluid"/>
                     <div>
-                        {product.price}
+                        {product.price} (x{product.quantity})
                     </div>
                 </div>
             </div>

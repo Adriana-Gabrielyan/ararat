@@ -2,11 +2,26 @@ import CartItem from 'components/cart-item/CartItem.component';
 import Total from 'components/total/Total.component';
 import {Link} from "react-router-dom";
 
-import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
+import {connect} from "react-redux";
+import {createStructuredSelector} from "reselect";
 import {selectCartItems} from "redux/cart/cart.selectors";
+
 const Cart = (props) => {
-    const { cartItems } = props;
+    const {cartItems} = props;
+    const total = () => {
+        let totalPrice = 0;
+        for (let i = 0; i < cartItems.length; i++) {
+            totalPrice += cartItems[i].price * cartItems[i].quantity;
+        }
+        return totalPrice;
+    };
+    const quantity = () => {
+        let quantity = 0;
+        for (let i = 0; i < cartItems.length; i++) {
+            quantity +=  cartItems[i].quantity;
+        }
+        return quantity;
+    };
     return (
         <section className="payment-page ">
             {cartItems.length > 0 ? (
@@ -17,7 +32,8 @@ const Cart = (props) => {
                             return (
                                 <CartItem
                                     key={cartItem.id}
-                                    {...cartItem}
+                                    item={cartItem}
+                                    quantity={cartItem.quantity}
                                 />
                             );
                         })}
@@ -25,7 +41,7 @@ const Cart = (props) => {
 
                     <div className="subtotal mb-3">
                         <div className="title">Subtotal</div>
-                        <Total/>
+                        <Total count={quantity()} total={total()}/>
                     </div>
                 </div>
             ) : (

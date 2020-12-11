@@ -1,8 +1,8 @@
 import Count from 'components/count/Count.component';
 import Price from 'components/price/Price.component';
 
-const CartItem = (props) => {
-  const {image, logo, price} = props
+const CartItem = ({item}) => {
+  const {image, logo, price, quantity} = item;
   return (
     <div className="selected-product-content mb-4">
       <div className="d-flex flex-wrap">
@@ -14,7 +14,7 @@ const CartItem = (props) => {
         </div>
 
         <div className="ml-auto d-flex flex-column">
-          <Count/>
+          <Count quantity={quantity}/>
           <Price price={price} />
           <div className="text-right mt-auto">
             <button

@@ -3,7 +3,7 @@ const Count = (props) => {
         <div className="count d-flex justify-content-end align-items-center position-relative">
             <span>Quantity</span>
             <span className="sub"> </span>
-            <input type="number" value="1" readOnly />
+            <input type="number" value={props.quantity} readOnly />
             <span className="add"> </span>
         </div>
     );
@@ -15,7 +15,7 @@ const CountSingle = (props) => {
             <button className="sub bg-transparent" type="button" aria-label="sub">
                 <span>-</span>
             </button>
-            <input type="number" value="1" className="mt-0" name="adults" aria-label="number" readOnly />
+            <input type="number" value={props.quantity} className="mt-0" name="adults" aria-label="number" readOnly />
             <button className="add bg-transparent" type="button" aria-label="add">
                 +
             </button>

@@ -5,6 +5,9 @@ import Select from "components/select/Select.component";
 import {Link} from "react-router-dom";
 import Total from "components/total/Total.component";
 import SelectedProduct from "components/selected-product/SelectedProduct.component";
+import {createStructuredSelector} from "reselect";
+import {selectCartItems} from "redux/cart/cart.selectors";
+import {connect} from "react-redux";
 
 const Payment = (props) => {
     const country_options = [
@@ -17,7 +20,22 @@ const Payment = (props) => {
         {value: 'lowToHigh', label: 'Price Low to High'},
         {value: 'highToLow', label: 'Price High to Low'},
     ];
+    const {cartItems} = props;
 
+    const total = () => {
+        let totalPrice = 0;
+        for (let i = 0; i < cartItems.length; i++) {
+            totalPrice += cartItems[i].price * cartItems[i].quantity;
+        }
+        return totalPrice;
+    };
+    const quantity = () => {
+        let quantity = 0;
+        for (let i = 0; i < cartItems.length; i++) {
+            quantity += cartItems[i].quantity;
+        }
+        return quantity;
+    };
     return (
         <section className="shipping-page d-flex align-items-start justify-content-between flex-wrap">
             <div className="left-side">
@@ -60,18 +78,17 @@ const Payment = (props) => {
                 </div>
                 <Link to="/cart" className="back mt-4 text-uppercase">return to cart</Link>
             </div>
-
             <div className="right-side">
                 <div className="title">Subtotal</div>
-                <Total className="subtotal"/>
+                <Total count={quantity()} total={total()} className="subtotal"/>
                 <div className="title">Selected Product</div>
-
-                    <SelectedProduct/>
-
-
+                <SelectedProduct/>
             </div>
         </section>
     )
 }
+const mapStateToProps = createStructuredSelector({
+    cartItems: selectCartItems
+});
 
-export default Payment;
+export default connect(mapStateToProps)(Payment);
