@@ -11,3 +11,8 @@ export const authPersistConfig = {
     storage: sessionStorage,
     blacklist: [],
 };
+export const cartItemsPersistConfig = {
+    key: "cart",
+    storage: sessionStorage,
+    whitelist: ["cartItems"],
+};

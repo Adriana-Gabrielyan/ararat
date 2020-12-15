@@ -46,7 +46,8 @@ const PRODUCTS_DATA = [
     },
     {
         id: 5,
-        image: "https://shop.araratbrandy.com/storage/products/6926/5fa9175845313_23.1-ARARAT-paper-bag_big.jpg",
+        image:
+            "https://shop.araratbrandy.com/storage/products/6926/5fa9175845313_23.1-ARARAT-paper-bag_big.jpg",
         price: 35600,
         category_id: 5,
         name: "Ararat 5",
@@ -56,8 +57,7 @@ const PRODUCTS_DATA = [
     },
     {
         id: 6,
-        image:
-            "https://shop.araratbrandy.com/storage/products/6808/5f60aa551a5c2_Mini_3-in-1_Pack_3-4_ENG-2.png",
+        image: "https://shop.araratbrandy.com/storage/products/6966/5fb4e0bd48dc3_ararat-boxes-05.png",
         logo: "https://shop.araratbrandy.com/storage/logos/16056881304307993.svg",
         price: 1500,
         category_id: 3,
@@ -68,8 +68,7 @@ const PRODUCTS_DATA = [
     },
     {
         id: 7,
-        image:
-            "https://shop.araratbrandy.com/storage/products/6919/5fa910307fbe2_ararat_akhtamar_packshot_arm_50cl-copy.png",
+        image: "https://shop.araratbrandy.com/storage/products/6970/5fb4e11dc8955_ararat-boxes-02.png",
         logo: "https://shop.araratbrandy.com/storage/logos/16056880945174063.svg",
         price: 56000,
         category_id: 1,
@@ -80,7 +79,7 @@ const PRODUCTS_DATA = [
     },
     {
         id: 8,
-        image: "https://shop.araratbrandy.com/storage/products/6799/5f5f86e6d3007_ARARAT_SC2_AIO-1.png",
+        image: "https://shop.araratbrandy.com/storage/products/6964/5fb4d9c386afb_ararat-01.png",
         logo: "https://shop.araratbrandy.com/storage/logos/16056880477173997.svg",
         price: 29500,
         category_id: 2,
@@ -91,7 +90,7 @@ const PRODUCTS_DATA = [
     },
     {
         id: 9,
-        image: "https://shop.araratbrandy.com/storage/products/6775/5f58a050d960d_Erebuni-30-1.png",
+        image: "https://shop.araratbrandy.com/storage/products/6968/5fb4e0fce694b_ararat-boxes-03.png",
         logo: "https://shop.araratbrandy.com/storage/logos/16056891508864010.png",
         price: 48000,
         category_id: 3,
@@ -102,7 +101,8 @@ const PRODUCTS_DATA = [
     },
     {
         id: 10,
-        image: "https://shop.araratbrandy.com/storage/products/6803/5f607627262e7_01_packshot_75cl-copy.png",
+        image:
+            "https://shop.araratbrandy.com/storage/products/6904/5fa55f8370d80_22.3-ARMenia-2--your-name-2copy-min.png",
         logo: "https://shop.araratbrandy.com/storage/logos/16057046987206513.svg",
         price: 72000,
         category_id: 4,

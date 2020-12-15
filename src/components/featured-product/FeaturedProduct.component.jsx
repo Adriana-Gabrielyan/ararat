@@ -1,10 +1,10 @@
 import Price from "components/price/Price.component";
 import Button from "components/button/Button.component";
 import { connect } from "react-redux";
-import {addItemToCart} from "redux/cart/cart.actions";
+import { addItemToCart } from "redux/cart/cart.actions";
 
 const FeaturedProduct = (props) => {
-    const {addItemToCart,image,logo,price} = props;
+    const { addItemToCart, image, logo, price } = props;
     const handleClick = (event) => {
         event.preventDefault();
         event.stopPropagation();
@@ -26,4 +26,4 @@ const mapDispatchToProps = {
     addItemToCart,
 };
 
-export default connect(null,mapDispatchToProps)(FeaturedProduct);
+export default connect(null, mapDispatchToProps)(FeaturedProduct);

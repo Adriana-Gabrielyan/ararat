@@ -51,17 +51,17 @@ body {
 }
 .pagination li {
     padding: 7px;
-    a{
-        &:focus{
+    a {
+        &:focus {
             outline: none;
             box-shadow: none;
         }
-        &:hover{
-            color: $gold!important;
+        &:hover {
+            color: $gold !important;
         }
     }
-    &.active{
-        a{
+    &.active {
+        a {
             color: $gold;
         }
     }

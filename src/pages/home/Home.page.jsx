@@ -5,12 +5,11 @@ import CATEGORIES from "data/categories.data";
 const Home = () => {
     return (
         <section>
-            <HomeBannerSlider/>
+            <HomeBannerSlider />
 
             {CATEGORIES.map((category) => (
-                <ProductSlider  title={category.name} category={category.id}/>
+                <ProductSlider title={category.name} category={category.id} />
             ))}
-
         </section>
     );
 };

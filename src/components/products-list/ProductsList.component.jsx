@@ -1,6 +1,6 @@
 import ProductBox from "components/product-box/ProductBox.component";
 import ReactPaginate from "react-paginate";
-import {useState} from "react";
+import { useState } from "react";
 
 const ProductsList = (props) => {
     const [currentPage, setCurrentPage] = useState(0);
@@ -16,26 +16,22 @@ const ProductsList = (props) => {
         <div className="products ml-auto d-flex flex-wrap">
             <div className="justify-content-end d-flex mr-2 w-100">
                 <ReactPaginate
-                    previousLabel={'<'}
-                    nextLabel={'>'}
-                    breakLabel={'...'}
-                    breakClassName={'break-me'}
+                    previousLabel={"<"}
+                    nextLabel={">"}
+                    breakLabel={"..."}
+                    breakClassName={"break-me"}
                     marginPagesDisplayed={2}
                     onPageChange={handlePageClick}
                     pageCount={pageCount}
                     pageRangeDisplayed={5}
-                    containerClassName={'pagination'}
-                    subContainerClassName={'pages pagination'}
-                    activeClassName={'active'}
+                    containerClassName={"pagination"}
+                    subContainerClassName={"pages pagination"}
+                    activeClassName={"active"}
                 />
             </div>
-            {props.products.slice(offset, offset + PER_PAGE)
-                .map((item) => (
-                    <ProductBox key={item.id} item={item}/>
-                ))
-            }
-
-
+            {props.products.slice(offset, offset + PER_PAGE).map((item) => (
+                <ProductBox key={item.id} item={item} />
+            ))}
         </div>
     );
 };

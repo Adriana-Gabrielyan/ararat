@@ -5,10 +5,14 @@ import Count from "components/count/Count.component";
 import Button from "components/button/Button.component";
 import { Link } from "react-router-dom";
 
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+import { selectCartItems } from "redux/cart/cart.selectors";
+
 const ProductSingle = ({ match }) => {
     const single = PRODUCTS_DATA.filter((product) => match.params.id == product.id);
-    console.log(single);
-    const { image, logo, price, id, description, name } = single[0];
+
+    const { image, logo, price, description, name } = single[0];
     if (single.length === 0) {
         return <h1 className="text-center p-5">No such product</h1>;
     }
@@ -37,7 +41,7 @@ const ProductSingle = ({ match }) => {
                     <Select options={options} />
                     <p>Select the quantity</p>
                     <div className="d-flex justify-content-between align-items-end">
-                        <Count.CountSingle />
+                        <Count.CountSingle item={single[0]} />
                         <span className="small-text mb-0">Total Price</span>
                     </div>
                     <h4 className="text-right">
@@ -61,5 +65,8 @@ const ProductSingle = ({ match }) => {
         </section>
     );
 };
+const mapStateToProps = createStructuredSelector({
+    cartItems: selectCartItems,
+});
 
-export default ProductSingle;
+export default connect(mapStateToProps)(ProductSingle);

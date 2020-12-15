@@ -1,6 +1,5 @@
 const Price = (props) => {
-
-    const {price, className} = props;
+    const { price, className } = props;
     function numberWithSpaces(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
     }

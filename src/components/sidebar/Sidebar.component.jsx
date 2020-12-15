@@ -6,31 +6,35 @@ import FeaturedProduct from "components/featured-product/FeaturedProduct.compone
 const Sidebar = () => {
     const Products = PRODUCTS_DATA;
     const Categories = CATEGORIES;
-    const featured = Products.filter((product) => (product.featured === true))
+    const featured = Products.filter((product) => product.featured === true);
     const randomFeatured = featured[Math.floor(Math.random() * featured.length)];
     return (
         <>
             <div className="mobile-filter  d-md-none d-block">
-                <img src="/img/filter.svg" alt="" width="30px"/>
+                <img src="/img/filter.svg" alt="" width="30px" />
             </div>
             <aside className="products-sidebar">
-                <div
-                    className="sidebar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    -height">
+                <div className="sidebar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    -height">
                     <div className="d-md-none d-block text-right close-filter ml-auto pb-4">
-                        <img src="/img/close.svg" alt="" width="20"/>
+                        <img src="/img/close.svg" alt="" width="20" />
                     </div>
                     <div className="categories">
                         <div className="filter-title">Product Categories</div>
                         {Categories.map((category) => (
-                            <CheckBox variant="filter" key={category.id} label={category.name} id={category.id}/>
+                            <CheckBox
+                                variant="filter"
+                                key={category.id}
+                                label={category.name}
+                                id={category.id}
+                            />
                         ))}
                     </div>
                     <div className="price-filter mb-4">
                         <div className="filter-title">Filter Price</div>
                         <div className="d-flex align-items-center justify-content-between">
-                            <input type="number" placeholder="Min"/>
+                            <input type="number" placeholder="Min" />
                             <span>-</span>
-                            <input type="number" placeholder="Max"/>
+                            <input type="number" placeholder="Max" />
                         </div>
                     </div>
                     <div className="featured-product">

@@ -39,9 +39,7 @@ const ProductSlider = (props) => {
             <h1 className="title-h1 text-center">{props.title}</h1>
             <Slider {...settings} className="hovered-slider default-slider brandy-slider">
                 {Products.map((product) => (
-
                     <ProductSliderItem key={product.id} {...product} />
-
                 ))}
             </Slider>
 
