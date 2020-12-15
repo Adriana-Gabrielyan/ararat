@@ -17,7 +17,6 @@ const ProductBox = ({ item, addItemToCart }) => {
             <div className="product-img-div">
                 <img src={image} alt="" className="product-img img-fluid" />
             </div>
-
             <img src={logo} alt="" className="img-fluid" />
             <Price price={price} className="justify-content-center" />
             <Button onClick={handleClick}> ADD TO CART</Button>

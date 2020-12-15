@@ -1,13 +1,13 @@
 import FormInput from "../form-input/FormInput.component";
 import Select from "../select/Select.component";
 import Button from "../button/Button.component";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import countryList from "react-select-country-list";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import PaymentFormValidation from "./PaymentFormValidation";
 import usePaymentForm from "./usePaymentForm";
 
-const PaymentForm = ({submitForm}) => {
+const PaymentForm = ({ submitForm }) => {
     const [countryOptions, setCountryOptions] = useState();
     const [countryValue, setCountryValue] = useState();
     useEffect(() => {
@@ -19,12 +19,9 @@ const PaymentForm = ({submitForm}) => {
         const value = e.target.value;
         setCountryValue(value);
     };
-    const {handleChange, handleSubmit, values, errors} = usePaymentForm(
-        submitForm,
-        PaymentFormValidation
-    );
+    const { handleChange, handleSubmit, values, errors } = usePaymentForm(submitForm, PaymentFormValidation);
     return (
-        <form onSubmit={handleSubmit} className="left-side">
+        <form onSubmit={handleSubmit} className="left-side" noValidate>
             <div className="title">Contact Information</div>
             <div className="input-div">
                 <FormInput
@@ -50,7 +47,6 @@ const PaymentForm = ({submitForm}) => {
                         onChange={handleChange}
                     />
                     {errors.first_name && <p className="text-danger small">{errors.first_name}</p>}
-
                 </div>
                 <div className="w-48">
                     <FormInput
@@ -63,7 +59,6 @@ const PaymentForm = ({submitForm}) => {
                     />
                     {errors.last_name && <p className="text-danger small">{errors.last_name}</p>}
                 </div>
-
             </div>
             <div className="input-div">
                 <FormInput
@@ -95,7 +90,6 @@ const PaymentForm = ({submitForm}) => {
                     value={countryValue}
                     onChange={countryChangeHandler}
                 />
-
             </div>
             <div className="input-div d-flex justify-content-between flex-wrap">
                 {/*<Select options={city_options} className="w-48 shipping-input"/>*/}

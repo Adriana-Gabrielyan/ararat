@@ -1,16 +1,18 @@
+import {Link} from "react-router-dom";
 import Count from "components/count/Count.component";
 import Price from "components/price/Price.component";
 
 import { connect } from "react-redux";
 import { deleteItemFromCart } from "redux/cart/cart.actions";
 
+
 const CartItem = ({ item, deleteItem }) => {
-    const { image, logo, price, quantity } = item;
+    const { image, logo, price, id } = item;
     return (
         <div className="selected-product-content mb-4">
             <div className="d-flex flex-wrap">
                 <div className="payment-img">
-                    <img src={image} className="img-fluid" alt="" />
+                   <Link to={`/product/${id}`}> <img src={image} className="img-fluid" alt="" /></Link>
                 </div>
                 <div>
                     <img src={logo} alt="" className="logo-img" />
