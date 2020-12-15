@@ -40,18 +40,11 @@ const CountSingle = (props) => {
 
     return (
         <div className="count-buttons d-flex align-items-center">
-            <button className="sub bg-transparent" type="button" aria-label="sub"  onClick={decCount}>
+            <button className="sub bg-transparent" type="button" aria-label="sub" onClick={decCount}>
                 <span>-</span>
             </button>
-            <input
-                type="number"
-                value={1}
-                className="mt-0"
-                name="adults"
-                aria-label="number"
-                readOnly
-            />
-            <button className="add bg-transparent" type="button" aria-label="add"  onClick={incCount}>
+            <input type="number" value={1} className="mt-0" name="adults" aria-label="number" readOnly />
+            <button className="add bg-transparent" type="button" aria-label="add" onClick={incCount}>
                 +
             </button>
         </div>
