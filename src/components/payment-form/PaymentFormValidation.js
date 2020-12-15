@@ -28,7 +28,6 @@ export default function PaymentFormValidation(values) {
         errors.keep = 'This filed is required';
     }
 
-
     if (!values.email) {
         errors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(values.email)) {

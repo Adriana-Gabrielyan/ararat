@@ -13,6 +13,7 @@ const ProductSingle = ({ match }) => {
     const single = PRODUCTS_DATA.filter((product) => match.params.id == product.id);
 
     const { image, logo, price, description, name } = single[0];
+
     if (single.length === 0) {
         return <h1 className="text-center p-5">No such product</h1>;
     }

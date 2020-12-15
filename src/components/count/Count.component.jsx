@@ -1,8 +1,8 @@
-import { connect } from "react-redux";
-import { incrimentItemQuantity, decrimentItemQuantity } from "redux/cart/cart.actions";
+import {connect} from "react-redux";
+import {incrimentItemQuantity, decrimentItemQuantity} from "redux/cart/cart.actions";
 
 const Count = (props) => {
-    const { item, incrimentItemQuantity, decrimentItemQuantity } = props;
+    const {item, incrimentItemQuantity, decrimentItemQuantity} = props;
 
     function incCount() {
         incrimentItemQuantity(item.id);
@@ -18,7 +18,7 @@ const Count = (props) => {
             <span className="sub" onClick={decCount}>
                 {" "}
             </span>
-            <input type="number" value={item.quantity} readOnly />
+            <input type="number" value={item.quantity} readOnly/>
             <span className="add" onClick={incCount}>
                 {" "}
             </span>
@@ -27,8 +27,7 @@ const Count = (props) => {
 };
 
 const CountSingle = (props) => {
-    const { item, incrimentItemQuantity, decrimentItemQuantity } = props;
-    console.log(item);
+    const {item, incrimentItemQuantity, decrimentItemQuantity} = props;
 
     function incCount() {
         incrimentItemQuantity(item.id);
@@ -38,12 +37,18 @@ const CountSingle = (props) => {
         decrimentItemQuantity(item.id);
     }
 
+    if (item.id === 1) {
+        item.quantity = 1
+    }
+    console.log(item);
+
+
     return (
         <div className="count-buttons d-flex align-items-center">
             <button className="sub bg-transparent" type="button" aria-label="sub" onClick={decCount}>
                 <span>-</span>
             </button>
-            <input type="number" value={1} className="mt-0" name="adults" aria-label="number" readOnly />
+            <input type="number" value={item.quantity} className="mt-0" name="adults" aria-label="number" readOnly/>
             <button className="add bg-transparent" type="button" aria-label="add" onClick={incCount}>
                 +
             </button>
@@ -55,4 +60,4 @@ const mapDispatchToProps = {
     decrimentItemQuantity,
 };
 
-export default connect(null, mapDispatchToProps)(Object.assign(Count, { CountSingle }));
+export default connect(null, mapDispatchToProps)(Object.assign(Count, {CountSingle}));
