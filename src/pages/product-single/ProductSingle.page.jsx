@@ -9,10 +9,10 @@ import { createStructuredSelector } from "reselect";
 import { selectCartItems } from "redux/cart/cart.selectors";
 
 const ProductSingle = ({ match, cartItems }) => {
-    const single = PRODUCTS_DATA.filter((product) => match.params.id == product.id);
+    const single = PRODUCTS_DATA.find((product) => match.params.id == product.id);
 
-    const { image, logo, price, description, name } = single[0];
-    const cartItem = cartItems.filter((cartItem) => cartItem.id == single[0].id);
+    const { image, logo, price, description, name } = single;
+    const cartItem = cartItems.find((cartItem) => cartItem.id == single.id);
 
     if (single.length === 0) {
         return <h1 className="text-center p-5">No such product</h1>;
@@ -43,11 +43,11 @@ const ProductSingle = ({ match, cartItems }) => {
                     <Select options={options} />
                     <p>Select the quantity</p>
                     <div className="d-flex justify-content-between align-items-end">
-                        <Count.CountSingle item={single[0]} />
+                        <Count.CountSingle item={single} />
                         <span className="small-text mb-0">Total Price</span>
                     </div>
                     <h4 className="text-right">
-                        <b>{(cartItem[0]?.quantity || 1) * price}</b> AMD
+                        <b>{(cartItem?.quantity || 1) * price}</b> AMD
                     </h4>
 
                     <div className="d-flex justify-content-end mt-4">

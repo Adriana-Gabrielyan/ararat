@@ -3,7 +3,7 @@ import PRODUCTS_DATA from "data/products.data";
 import CATEGORIES from "data/categories.data";
 import FeaturedProduct from "components/featured-product/FeaturedProduct.component";
 
-const Sidebar = () => {
+const Sidebar = (props) => {
     const Products = PRODUCTS_DATA;
     const Categories = CATEGORIES;
     const featured = Products.filter((product) => product.featured === true);
@@ -26,15 +26,24 @@ const Sidebar = () => {
                                 key={category.id}
                                 label={category.name}
                                 id={category.id}
+                                onClick={() => props.onCheckboxCheck(category.id)}
                             />
                         ))}
                     </div>
                     <div className="price-filter mb-4">
                         <div className="filter-title">Filter Price</div>
                         <div className="d-flex align-items-center justify-content-between">
-                            <input type="number" placeholder="Min" />
+                            <input
+                                type="number"
+                                placeholder="Min"
+                                onChange={props.onPriceChangeMin}
+                            />
                             <span>-</span>
-                            <input type="number" placeholder="Max" />
+                            <input
+                                type="number"
+                                placeholder="Max"
+                                onChange={props.onPriceChangeMax}
+                            />
                         </div>
                     </div>
                     <div className="featured-product">
