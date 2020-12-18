@@ -1,5 +1,5 @@
 import CheckBox from "components/checkbox/Checkbox.component";
-import PRODUCTS_DATA from "data/products.data";
+import PRODUCTS_DATA from "redux/products/products.data";
 import CATEGORIES from "data/categories.data";
 import FeaturedProduct from "components/featured-product/FeaturedProduct.component";
 
@@ -33,17 +33,9 @@ const Sidebar = (props) => {
                     <div className="price-filter mb-4">
                         <div className="filter-title">Filter Price</div>
                         <div className="d-flex align-items-center justify-content-between">
-                            <input
-                                type="number"
-                                placeholder="Min"
-                                onChange={props.onPriceChangeMin}
-                            />
+                            <input type="number" placeholder="Min" onChange={props.onPriceChangeMin} />
                             <span>-</span>
-                            <input
-                                type="number"
-                                placeholder="Max"
-                                onChange={props.onPriceChangeMax}
-                            />
+                            <input type="number" placeholder="Max" onChange={props.onPriceChangeMax} />
                         </div>
                     </div>
                     <div className="featured-product">

@@ -29,7 +29,7 @@ const Count = (props) => {
 };
 
 const CountSingle = (props) => {
-    const { item, incrimentItemQuantity, decrimentItemQuantity, cartItems, addItemToCart } = props;
+    const { item, incrimentItemQuantity, decrimentItemQuantity, cartItems } = props;
 
     function incCount() {
         incrimentItemQuantity(item.id);

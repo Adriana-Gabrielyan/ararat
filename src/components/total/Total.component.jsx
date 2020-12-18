@@ -3,11 +3,10 @@ import { Link } from "react-router-dom";
 
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
-import {selectCartItems, selectCartItemsCount, selectCartItemsTotal} from "redux/cart/cart.selectors";
+import { selectCartItems, selectCartItemsCount, selectCartItemsTotal } from "redux/cart/cart.selectors";
 
 const Total = (props) => {
     const { cartItems, cartItemsCount, cartItemsTotal } = props;
-
 
     return (
         <div className={`selected-product-content  ${props.className}`}>

@@ -3,11 +3,11 @@ import ProductSliderItem from "../product-slider-item/ProductSliderItem";
 import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import PRODUCTS_DATA from "data/products.data";
+import PRODUCTS_DATA from "redux/products/products.data";
 
 const ProductSlider = (props) => {
     const settings = {
-        slidesToShow: 4,
+        slidesToShow: 2,
         slidesToScroll: 1,
         arrows: true,
         // autoplay:true,
@@ -34,11 +34,14 @@ const ProductSlider = (props) => {
         ],
     };
     const Products = PRODUCTS_DATA;
+    const filteredCat =  Products.filter((product) =>
+        product.category_id === props.category
+    )
     return (
         <section className="brandy-section">
             <h1 className="title-h1 text-center">{props.title}</h1>
             <Slider {...settings} className="hovered-slider default-slider brandy-slider">
-                {Products.map((product) => (
+                {filteredCat.map((product) => (
                     <ProductSliderItem key={product.id} {...product} />
                 ))}
             </Slider>

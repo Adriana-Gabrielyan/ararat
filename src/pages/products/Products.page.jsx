@@ -2,16 +2,17 @@ import { useState, useEffect } from "react";
 import Select from "components/select/Select.component";
 import Sidebar from "components/sidebar/Sidebar.component";
 import ProductsList from "components/products-list/ProductsList.component";
-import PRODUCTS_DATA from "data/products.data";
-import ReactPaginate from "react-paginate";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+import { selectProductsItems } from "redux/products/products.selectors";
 
-const products = PRODUCTS_DATA;
-const Products = () => {
+const Products = ( products ) => {
     const options = [
         { value: "sortBy", label: "Sort By Default" },
         { value: "lowToHigh", label: "Price Low to High" },
         { value: "highToLow", label: "Price High to Low" },
     ];
+
     const [sortedProducts, setSortedProducts] = useState([]);
 
     function onSelectChange(event) {
@@ -26,22 +27,10 @@ const Products = () => {
         });
         setSortedProducts(sorted);
     }
-    function onSelectChange(event) {
-        const sorted = [...products].sort(function (a, b) {
-            let result;
-            if (event.target.value === 'lowToHigh') {
-                result = a.price - b.price;
-            } else if (event.target.value === 'highToLow') {
-                result = b.price - a.price;
-            }
-            return result;
-        });
-        setSortedProducts(sorted);
-    }
 
-    const [MinMaxPrice, setMinMaxPrice] = useState({max: null, min: null});
+    const [MinMaxPrice, setMinMaxPrice] = useState({ max: null, min: null });
 
-    const sortByMinMax = ({min = null, max = null, array, eItem}) => {
+    const sortByMinMax = ({ min = null, max = null, array, eItem }) => {
         if (min && max) {
             return array.filter((item) => eval(eItem) >= min && eval(eItem) <= max);
         }
@@ -58,9 +47,9 @@ const Products = () => {
             max: MinMaxPrice.max,
             min: event.target.value,
             array: products,
-            eItem: 'item.price',
+            eItem: "item.price",
         });
-        setMinMaxPrice({...MinMaxPrice, min: event.target.value});
+        setMinMaxPrice({ ...MinMaxPrice, min: event.target.value });
         setSortedProducts(sortedArray);
     }
 
@@ -69,9 +58,9 @@ const Products = () => {
             min: MinMaxPrice.min,
             max: event.target.value,
             array: products,
-            eItem: 'item.price',
+            eItem: "item.price",
         });
-        setMinMaxPrice({...MinMaxPrice, max: event.target.value});
+        setMinMaxPrice({ ...MinMaxPrice, max: event.target.value });
         setSortedProducts(sortedArray);
     }
 
@@ -87,6 +76,7 @@ const Products = () => {
         setCheckedItems(id);
         setSortedProducts(sortedArray);
     }
+
     return (
         <section className="products-page">
             <div className="text-right">
@@ -111,4 +101,9 @@ const Products = () => {
         </section>
     );
 };
-export default Products;
+
+const mapStateToProps = createStructuredSelector({
+    products: selectProductsItems,
+});
+
+export default connect(mapStateToProps)(Products);

@@ -1,4 +1,4 @@
-import PRODUCTS_DATA from "data/products.data";
+import PRODUCTS_DATA from "redux/products/products.data";
 import Select from "components/select/Select.component";
 import Price from "components/price/Price.component";
 import Count from "components/count/Count.component";
