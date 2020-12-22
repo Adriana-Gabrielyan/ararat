@@ -12,9 +12,9 @@ const ProductSingle = ({ match, cartItems }) => {
     const single = PRODUCTS_DATA.find((product) => match.params.id == product.id);
 
     const { image, logo, price, description, name } = single;
-    const cartItem = cartItems.find((cartItem) => cartItem.id == single.id);
+    const cartItem = cartItems.find((cartItem) => cartItem.id == single?.id);
 
-    if (single.length === 0) {
+    if (single.length === 0 || !single) {
         return <h1 className="text-center p-5">No such product</h1>;
     }
 

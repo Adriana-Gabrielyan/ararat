@@ -4,5 +4,8 @@ const selectProducts = (state) => state.products;
 
 export const selectProductsItems = createSelector(
     [selectProducts],
-    (products) => products.productItems
+    (products) => {
+       return  products.products
+    }
 );
+

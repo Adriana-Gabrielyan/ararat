@@ -6,8 +6,8 @@ import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { selectProductsItems } from "redux/products/products.selectors";
 
-const Products = ( products ) => {
-    const options = [
+const Products = ({products} ) => {
+     const options = [
         { value: "sortBy", label: "Sort By Default" },
         { value: "lowToHigh", label: "Price Low to High" },
         { value: "highToLow", label: "Price High to Low" },
